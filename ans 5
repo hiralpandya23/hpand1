@@ -1,0 +1,9 @@
+there are a few solutions that you can implement to fix this issue:
+
+Make your website mobile-friendly: Responsive design is an essential aspect of web development in today's world. You can ensure that your website is mobile-friendly by using a responsive design that adapts to different screen sizes. This can be achieved through media queries or frameworks such as Bootstrap or Foundation.
+
+Increase font size: One common issue with websites on mobile devices is that the text can be too small to read comfortably. Increasing the font size can make your website more readable on mobile devices. You can use CSS to change the font size, and it is recommended to use relative units like em or rem instead of fixed units like pixels.
+
+Simplify the design: A complicated design with lots of images, graphics, and animations can slow down the loading time of your website on mobile devices. It is best to keep the design simple and lightweight, without compromising on the user experience.
+
+By implementing these solutions, you can make your website more mobile-friendly and ensure that it is easily readable on various devices, including iPhones.
