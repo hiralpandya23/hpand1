@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Albert Einstein</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<h1>Albert Einstein</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Me</a></li>
+				<li><a href="papers.html">Papers</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="hobbies.html">Hobbies</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="intro">
+			<img src="Einstein_tongue.jpg" alt="Albert Einstein">
+			<p>“Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution.”</p>
+		</section>
+		<section class="papers">
+			<h2>Published Papers</h2>
+			<ul id="papers-list">
+				<!-- Papers will be added dynamically with JavaScript -->
+			</ul>
+			<button id="load-more">Load more papers</button>
+		</section>
+	</main>
+	<script>
+		// JSON data
+		const books = {
+			"books": [{
+				"id":1,
+				"title": "The Universe and Dr. Einstein",
+				"year": 2005,
+				"published": true
+			},
+			{
+				"id":2,
+				"title": "Einstein on politics",
+				"year": 2013,
+				"published": true
+			},
+			{
+				"id":3,
+				"title": "Einstein versus the physical review",
+				"year": 2005,
+				"published": true
+			},
+			{
+				"id":4,
+				"title": "Einstein on peace",
+				"year": 2017,
+				"published": true
+			},
+			{
+				"id":5,
+				"title": "Einstein: The life and times",
+				"year": 2022,
+				"author": "Ronald Clark",
+				"published": false
+			}]
+		};
+
+	// Function to create a new list item for each paper
+	function createPaperListItem(paper) {
+		const li = document.createElement("li");
+		const a = document.createElement("a");
+		a.href = "#";
+		a.textContent = paper.title;
+		li.appendChild(a);
+		return li;
+	}
+
+	// Function to render the papers on the page
+	function renderPapers() {
+		const papersList = document.getElementById("papers-list");
+		const papers = books.books;
+		for (let i = 0; i < papers.length; i++) {
+			const paper = papers[i];
+			const li = createPaperListItem(paper);
+			papersList.appendChild(li);
+		}
+	}
+
+	// Attach event listener to the Load more button
+	const loadMoreButton = document.getElementById("load-more");
+	loadMoreButton.addEventListener("click", function() {
+		renderPapers();
+		loadMoreButton.style.display = "none";
+	});
+
+</script>
+</body>
+</html>
+
+
+
+
+
